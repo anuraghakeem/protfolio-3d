@@ -4,7 +4,7 @@ import * as THREE from 'three';
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-import anurag from './assets/anuragcopy.png'
+import anurag from './assets/anurag.png'
 import moonImage from './assets/moonImage.jpeg'
 import space from './assets/space.jpeg'
 import normal from './assets/normal.jpeg'
