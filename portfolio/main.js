@@ -4,6 +4,11 @@ import * as THREE from 'three';
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
+import anurag from './assets/anuragcopy.png'
+import moonImage from './assets/moonImage.jpeg'
+import space from './assets/space.jpeg'
+import normal from './assets/normal.jpeg'
+
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -48,11 +53,11 @@ function addStar() {
 
 Array(200).fill().forEach(addStar)
 
-const spaceTexture = new THREE.TextureLoader().load('space.jpeg');
+const spaceTexture = new THREE.TextureLoader().load(space);
 scene.background = spaceTexture;
 
 // Avatar
-const jeffTexture = new THREE.TextureLoader().load('anurag.png');
+const jeffTexture = new THREE.TextureLoader().load(anurag);
 const jeff = new THREE.Mesh(
  new THREE.BoxGeometry(3,3,3),
  new THREE.MeshBasicMaterial( { map: jeffTexture } )
@@ -60,8 +65,8 @@ const jeff = new THREE.Mesh(
 scene.add(jeff);
 
 // Moon
-const moonTexture = new THREE.TextureLoader().load('moon.jpeg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpeg');
+const moonTexture = new THREE.TextureLoader().load(moonImage);
+const normalTexture = new THREE.TextureLoader().load(normal);
 const moon = new THREE.Mesh(
  new THREE.SphereGeometry(3, 32, 32),
  new THREE.MeshStandardMaterial( {
