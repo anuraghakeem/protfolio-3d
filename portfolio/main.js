@@ -8,6 +8,32 @@ import anurag from './assets/anurag.png'
 import moonImage from './assets/moonImage.jpeg'
 import space from './assets/space.jpeg'
 import normal from './assets/normal.jpeg'
+import backgroundMusic from './assets/backgroundMusic.mp3'
+
+var audio = new Audio(backgroundMusic);
+
+const icon = document.querySelector("#audio-button > i");
+
+const audioButton = document.querySelector('#audio-button')
+
+function playBackgroundMusic() {
+  console.log('clicked');
+  if(audio.paused){
+  audio.play();
+  icon.classList.remove('fa-volume-mute');
+    icon.classList.add('fa-volume-up');
+  }
+  else{
+    audio.pause();
+    
+    icon.classList.remove('fa-volume-up');
+  icon.classList.add('fa-volume-mute');
+  }
+}
+
+audioButton.onclick = playBackgroundMusic
+
+// playBackgroundMusic()
 
 const scene = new THREE.Scene();
 

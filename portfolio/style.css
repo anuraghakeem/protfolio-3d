@@ -82,6 +82,7 @@ canvas {
 
   blockquote a {
     color: black;
+    line-height: 1.3;
   }
   blockquote a:visited {
     color: black;
@@ -93,3 +94,43 @@ canvas {
   a:visited{
     color: white;
   }
+
+  #audio-button{
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    border-radius: 30px;
+    border: none;
+  }
+
+  /* Mobile start */
+
+  @media screen and (max-width:450px) {
+    header{
+      grid-column: 2 / span 10;
+    font-size: 1.7rem;
+    padding: 1.8rem;
+    }
+
+    blockquote p {
+      font-size: 2rem;
+      display: inline;
+    }
+
+    section {
+      grid-column: 2 / 12;
+      padding: 0.8rem;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    .left {
+      grid-column: 2 / 12;
+    }
+
+  }
+
+  /* Mobile end */
